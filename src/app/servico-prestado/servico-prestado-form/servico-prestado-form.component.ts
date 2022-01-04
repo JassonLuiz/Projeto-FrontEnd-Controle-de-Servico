@@ -3,7 +3,6 @@ import { Cliente } from 'src/app/clientes/cliente';
 import { ClientesService } from '../../clientes.service';
 import { ServicoPrestado } from '../servicoPrestado';
 import { ServicoPrestadoService } from '../../servico-prestado.service'
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-servico-prestado-form',
