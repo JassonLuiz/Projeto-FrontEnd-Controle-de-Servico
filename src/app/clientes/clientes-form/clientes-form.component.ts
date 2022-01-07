@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { map } from 'jquery';
 
 import { ClientesService } from 'src/app/clientes.service';
 import { Cliente } from '../cliente';

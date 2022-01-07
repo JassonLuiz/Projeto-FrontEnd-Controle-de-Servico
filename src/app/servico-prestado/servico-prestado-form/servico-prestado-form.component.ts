@@ -3,6 +3,7 @@ import { Cliente } from 'src/app/clientes/cliente';
 import { ClientesService } from '../../clientes.service';
 import { ServicoPrestado } from '../servicoPrestado';
 import { ServicoPrestadoService } from '../../servico-prestado.service'
+import { Route, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-servico-prestado-form',
@@ -19,7 +20,8 @@ export class ServicoPrestadoFormComponent implements OnInit {
 
   constructor(
     private clienteService: ClientesService,
-    private service: ServicoPrestadoService
+    private service: ServicoPrestadoService,
+    private router: Router
   ) { 
     this.servico = new ServicoPrestado();
   }
@@ -41,6 +43,10 @@ export class ServicoPrestadoFormComponent implements OnInit {
         this.success = false;
         this.errors = errorResponse.error.errors;
       })
+  }
+
+  voltarParaLista(){
+    this.router.navigate(['/servico-prestado-listagem']);
   }
 
 }
